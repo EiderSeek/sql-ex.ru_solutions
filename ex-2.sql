@@ -6,4 +6,4 @@ List all printer makers. Result set: maker.
 SELECT Product.maker 
 FROM Product
 WHERE type='Printer'
-GROUP BY maker
+GROUP BY maker;
