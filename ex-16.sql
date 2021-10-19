@@ -5,8 +5,8 @@ Get pairs of PC models with identical speeds and the same RAM capacity. Each res
 
 --Solution:
 SELECT DISTINCT 
-     a.model AS model1
-    ,b.model AS model2
+     a.model
+    ,b.model
     ,a.speed
     ,a.ram
 FROM PC AS a
