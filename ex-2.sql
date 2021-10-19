@@ -1,5 +1,5 @@
 /*Exercise: 2
-List all printer makers. Result set: maker.
+List all printer makers.
 */
 
 --Solution:
