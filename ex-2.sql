@@ -1,4 +1,5 @@
-/*Exercise: 2
+/*
+Exercise: 2
 List all printer makers.
 */
 
