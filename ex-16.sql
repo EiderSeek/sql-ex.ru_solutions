@@ -5,12 +5,12 @@ Get pairs of PC models with identical speeds and the same RAM capacity. Each res
 
 --Solution:
 SELECT DISTINCT 
-      a.model
-     ,b.model
-     ,a.speed
-     ,a.ram
-FROM  PC AS a
-     ,PC AS b
-WHERE a.ram=b.ram 
-  AND a.speed=b.speed 
-  AND a.model>b.model;
+      A.model
+     ,B.model
+     ,B.speed
+     ,A.ram
+FROM  PC AS A
+     ,PC AS B
+WHERE A.ram=B.ram 
+  AND A.speed=B.speed 
+  AND A.model>B.model;
