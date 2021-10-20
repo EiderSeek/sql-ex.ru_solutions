@@ -40,4 +40,4 @@ WHERE  price=
 (
   SELECT MAX(price)
   FROM   Total_CTE
-)
+);
