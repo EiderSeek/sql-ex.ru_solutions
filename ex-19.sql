@@ -4,11 +4,10 @@ For each maker having models in the Laptop table, find out the average screen si
 */
 
 --Solution:
-SELECT
-       p.maker
-      ,AVG(l.screen) Average_screen_size
-FROM   Product p
-INNER JOIN Laptop l 
-ON l.model=p.model
-GROUP BY p.maker;
+SELECT   P.maker
+        ,AVG(L.screen) Average_screen_size
+FROM     Product P
+JOIN     Laptop L 
+ON       L.model=P.model
+GROUP BY P.maker;
 
