@@ -12,8 +12,8 @@ JOIN   Product P
 ON     D.model=P.model
 WHERE  D.color='y' 
   AND  D.price=
-   (
-    SELECT MIN(price) 
-    FROM   Printer D
-    WHERE  D.color='y'
-   );
+       (
+       SELECT MIN(price) 
+       FROM   Printer D
+       WHERE  D.color='y'
+       );
