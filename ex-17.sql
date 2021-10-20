@@ -5,14 +5,14 @@ Get the laptop models that have a speed smaller than the speed of any PC.
 
 --Solution:
 SELECT DISTINCT 
-       a.type
-      ,l.model
-      ,l.speed
-FROM   Product AS a
-      ,Laptop  AS l
-WHERE  l.speed<ALL
+       P.type
+      ,L.model
+      ,L.speed
+FROM   Product AS P
+      ,Laptop  AS L
+WHERE  L.speed<ALL
   (
-   SELECT p.speed
-   FROM   PC AS p
+   SELECT speed
+   FROM   PC
   )
-  AND  a.type='Laptop';
+  AND  P.type='Laptop';
