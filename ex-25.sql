@@ -22,7 +22,7 @@ WHERE  speed=
       FROM   PC
     )
   )
-  AND ram=
+  AND  ram=
   (
   SELECT MIN(ram)
   FROM   PC
