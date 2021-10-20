@@ -4,18 +4,27 @@ Get the models and prices for all commercially available products (of any type) 
 */
 
 --Solution:
-SELECT DISTINCT PC.model, PC.price
-FROM PC
-INNER JOIN Product ON Product.model=PC.model
-WHERE Product.maker='B'
+SELECT DISTINCT 
+        PC.model
+       ,PC.price
+FROM    PC
+JOIN    Product P 
+ON      P.model=PC.model
+WHERE   P.maker='B'
 UNION
-SELECT DISTINCT Laptop.model, Laptop.price
-FROM Laptop
-INNER JOIN Product ON Product.model=Laptop.model
-WHERE Product.maker='B'
+SELECT DISTINCT 
+        L.model
+       ,L.price
+FROM    Laptop L
+JOIN    Product P
+ON      P.model=L.model
+WHERE   P.maker='B'
 UNION
-SELECT DISTINCT Printer.model, Printer.price
-FROM Printer
-INNER JOIN Product ON Product.model=Printer.model
-WHERE Product.maker='B';
+SELECT DISTINCT 
+        D.model
+       ,D.price
+FROM    Printer D
+JOIN    Product P 
+ON      P.model=D.model
+WHERE   P.maker='B';
 
