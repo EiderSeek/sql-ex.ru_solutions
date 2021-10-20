@@ -4,8 +4,10 @@ Find the makers producing PCs but not laptops.
 */
 
 --Solution:
-SELECT maker FROM Product
-WHERE type='PC'
+SELECT maker 
+FROM   Product
+WHERE  type='PC'
 EXCEPT
-SELECT maker FROM Product 
-WHERE type='Laptop';
+SELECT maker 
+FROM   Product 
+WHERE  type='Laptop';
