@@ -4,7 +4,10 @@ For the ships in the Ships table that have at least 10 guns, get the class, name
 */
 
 --Solution:
-SELECT Classes.class, Ships.name, Classes.country
-FROM Classes
-INNER JOIN Ships ON Classes.class=Ships.class
-WHERE Classes.numGuns>=10;
+SELECT C.class
+      ,S.name
+      ,C.country
+FROM   Classes C
+JOIN   Ships S 
+ON     C.class=S.class
+WHERE  C.numGuns>=10;
