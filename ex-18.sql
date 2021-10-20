@@ -5,15 +5,15 @@ Find the makers of the cheapest color printers.
 
 --Solution:
 SELECT DISTINCT 
-       product.maker
-      ,printer.price
-FROM   printer
-INNER JOIN product 
-ON printer.model=product.model
-WHERE printer.color='y' 
-  AND printer.price=
-  (
+       P.maker
+      ,D.price
+FROM   Printer D
+JOIN   Product P 
+ON     D.model=P.model
+WHERE  D.color='y' 
+  AND  D.price=
+   (
     SELECT MIN(price) 
-    FROM printer 
-    WHERE printer.color='y'
+    FROM   Printer D
+    WHERE  D.color='y'
    );
