@@ -16,4 +16,4 @@ WHERE printer.color='y'
     SELECT MIN(price) 
     FROM printer 
     WHERE printer.color='y'
-   )
+   );
