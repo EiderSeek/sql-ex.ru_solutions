@@ -15,4 +15,4 @@ WHERE l.speed<ALL
   SELECT p.speed
   FROM PC AS p
   )
-  AND a.type='Laptop'
+  AND a.type='Laptop';
