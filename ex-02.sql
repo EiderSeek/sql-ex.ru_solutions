@@ -4,7 +4,7 @@ List all printer makers.
 */
 
 --Solution:
-SELECT Product.maker 
-FROM Product
-WHERE type='Printer'
+SELECT   p.maker 
+FROM     Product p
+WHERE    type='Printer'
 GROUP BY maker;
