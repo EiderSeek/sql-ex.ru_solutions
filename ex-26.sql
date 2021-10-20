@@ -5,8 +5,7 @@ Find out the average price of PCs and laptops produced by maker A.
 
 --Solution:
 SELECT  AVG(T.price)
-FROM
-        (
+FROM    (
         SELECT price
         FROM   PC
         JOIN   Product P
