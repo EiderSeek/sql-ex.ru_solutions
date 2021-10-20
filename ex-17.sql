@@ -12,7 +12,7 @@ FROM   Product AS P
       ,Laptop  AS L
 WHERE  L.speed<ALL
        (
-        SELECT speed
-        FROM   PC
+       SELECT speed
+       FROM   PC
        )
   AND  P.type='Laptop';
