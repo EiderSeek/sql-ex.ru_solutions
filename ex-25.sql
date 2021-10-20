@@ -26,5 +26,5 @@ WHERE  speed=
   (
   SELECT MIN(ram)
   FROM   PC
-  )
+  );
 
