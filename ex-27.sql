@@ -12,10 +12,10 @@ FROM   (
        JOIN PC
        ON P.model=PC.model
        WHERE P.maker IN
-             (
-             SELECT maker
-             FROM Product
-             WHERE type='Printer'
-             )
+                        (
+                        SELECT maker
+                        FROM Product
+                        WHERE type='Printer'
+                        )
        ) PM
 GROUP BY PM.maker;
