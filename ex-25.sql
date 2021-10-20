@@ -4,27 +4,27 @@ Find the printer makers also producing PCs with the lowest RAM capacity and the 
 */
 
 --Solution:
-SELECT p.maker
-FROM   product p
+SELECT P.maker
+FROM   Product P
 WHERE  type='Printer'
 INTERSECT
-SELECT p.maker
-FROM   product p
+SELECT P.maker
+FROM   Product P
 JOIN   PC
-ON     p.model=PC.model
+ON     P.model=PC.model
 WHERE  speed= 
-  (
-    SELECT MAX(speed)
-    FROM   PC
-    WHERE  ram=
-    (
-      SELECT MIN(ram)
-      FROM   PC
-    )
-  )
+       (
+        SELECT MAX(speed)
+        FROM   PC
+        WHERE  ram=
+               (
+                SELECT MIN(ram)
+                FROM   PC
+               )
+       )
   AND  ram=
-  (
-  SELECT MIN(ram)
-  FROM   PC
-  );
+       (
+        SELECT MIN(ram)
+        FROM   PC
+       );
 
