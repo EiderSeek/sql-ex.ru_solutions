@@ -4,9 +4,9 @@ Find the makers producing at least three distinct models of PCs.
 */
 
 --Solution:
-SELECT      p.maker
+SELECT      P.maker
            ,COUNT(p.model) No_PC_Models
-FROM        Product p
-WHERE       p.type='PC'
-GROUP BY    p.maker
-HAVING      COUNT(p.model)>=3;
+FROM        Product P
+WHERE       P.type='PC'
+GROUP BY    P.maker
+HAVING      COUNT(P.model)>=3;
