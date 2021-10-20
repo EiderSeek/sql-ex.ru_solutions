@@ -14,17 +14,17 @@ JOIN   PC
 ON     P.model=PC.model
 WHERE  speed= 
        (
-        SELECT MAX(speed)
-        FROM   PC
-        WHERE  ram=
-               (
-                SELECT MIN(ram)
-                FROM   PC
-               )
+       SELECT MAX(speed)
+       FROM   PC
+       WHERE  ram=
+              (
+              SELECT MIN(ram)
+              FROM   PC
+              )
        )
   AND  ram=
        (
-        SELECT MIN(ram)
-        FROM   PC
+       SELECT MIN(ram)
+       FROM   PC
        );
 
