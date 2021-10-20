@@ -4,6 +4,10 @@ Find the model number, speed and hard drive capacity of PCs cheaper than $600 ha
 */
 
 --Solution:
-SELECT model, speed, hd
-FROM PC
-WHERE price<600 AND (cd='12x' OR cd='24x');
+SELECT model
+      ,speed
+      ,hd
+FROM   PC
+WHERE  price<600 
+  AND (cd='12x' 
+  OR   cd='24x');
