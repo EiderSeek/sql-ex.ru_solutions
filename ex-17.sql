@@ -9,7 +9,7 @@ SELECT DISTINCT
       ,l.model
       ,l.speed
 FROM   Product AS a
-      ,Laptop AS l
+      ,Laptop  AS l
 WHERE l.speed<ALL
   (
   SELECT p.speed
