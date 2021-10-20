@@ -18,4 +18,4 @@ FROM
     JOIN Product P
     ON L.model=P.model
     WHERE P.maker='A'
-) T
+) T;
