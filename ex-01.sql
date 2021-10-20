@@ -4,6 +4,8 @@ Find the model number, speed and hard drive capacity for all the PCs with prices
 */
 
 --Solution:
-SELECT PC.model, PC.speed, PC.hd
-FROM PC
-WHERE PC.price<500;
+SELECT  PC.model
+       ,PC.speed
+       ,PC.hd
+FROM    PC
+WHERE   PC.price<500;
