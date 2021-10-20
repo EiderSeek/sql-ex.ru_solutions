@@ -9,7 +9,7 @@ SELECT DISTINCT
       ,price 
 FROM   Printer
 WHERE  price=
-         (
-          SELECT MAX(price)
-          FROM   Printer
-         );      
+       (
+        SELECT MAX(price)
+        FROM   Printer
+       );      
