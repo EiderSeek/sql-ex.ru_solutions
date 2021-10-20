@@ -10,9 +10,9 @@ SELECT DISTINCT
       ,l.speed
 FROM   Product AS a
       ,Laptop  AS l
-WHERE l.speed<ALL
+WHERE  l.speed<ALL
   (
-  SELECT p.speed
-  FROM PC AS p
+   SELECT p.speed
+   FROM   PC AS p
   )
-  AND a.type='Laptop';
+  AND  a.type='Laptop';
