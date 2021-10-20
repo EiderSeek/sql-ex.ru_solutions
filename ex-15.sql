@@ -4,7 +4,7 @@ Get hard drive capacities that are identical for two or more PCs.
 */
 
 --Solution:
-SELECT PC.hd
-FROM PC
-GROUP BY PC.hd
-HAVING COUNT(PC.hd)>=2;
+SELECT   hd
+FROM     PC
+GROUP BY hd
+HAVING   COUNT(hd)>=2;
