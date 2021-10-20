@@ -12,8 +12,8 @@ AS
   FROM   PC
   WHERE  price=
     (
-      SELECT MAX(price)
-      FROM   PC
+    SELECT MAX(price)
+    FROM   PC
     )
   UNION
   SELECT model
@@ -21,8 +21,8 @@ AS
   FROM   Laptop
   WHERE  price=
     (
-      SELECT MAX(price)
-      FROM   Laptop
+    SELECT MAX(price)
+    FROM   Laptop
     )
   UNION
   SELECT model
@@ -30,14 +30,14 @@ AS
   FROM   Printer  
   WHERE  price=
     (
-      SELECT MAX(price)
-      FROM   Printer
+    SELECT MAX(price)
+    FROM   Printer
     )
 )
 SELECT model
 FROM   Total_CTE
 WHERE  price=
-(
-  SELECT MAX(price)
-  FROM   Total_CTE
-);
+       (
+       SELECT MAX(price)
+       FROM   Total_CTE
+       );
