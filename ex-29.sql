@@ -28,7 +28,7 @@ SELECT    COALESCE(io.point, oo.point)
          ,inc
          ,out
 FROM      income_o io 
-FULL JOIN outcome_o o 
+FULL JOIN outcome_o oo 
 ON        io.point=oo.point
 AND       io.date=oo.date;
 
